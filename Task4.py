@@ -25,3 +25,14 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
+def task4():
+  telemarketers = []
+  for c in calls:
+    if c[0][0:3] == "140" and c[0] not in telemarketers:
+      telemarketers.append(c[0])
+
+  print("These numbers could be telemarketers: ", end="\n")
+  print(", ".join(telemarketers))
+
+if __name__ == "__main__":
+  task4()

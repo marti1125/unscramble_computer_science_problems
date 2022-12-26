@@ -44,3 +44,30 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+def task3():
+  list_code_areas = []
+  for c in calls:
+    calling_phone = c[0]
+    if calling_phone[0] == "(":
+      last = calling_phone.index(")")
+      code = calling_phone[1:last]
+      if code not in list_code_areas:
+        list_code_areas.append(code)
+    #if calling_phone[0] in ["7", "8", "9"]:
+    #  code = calling_phone[0:4]
+    #  if code not in list_code_areas:
+    #    list_code_areas.append(code)
+  list_code_areas.sort()
+  print(f"The numbers called by people in Bangalore have codes:", end="\n")
+  print((", ").join(list_code_areas))
+
+  count_bangalore_code = len([c for c in calls if "(080)" in c[0]])
+  total_of_calls = len(calls)
+
+  percentage = round((count_bangalore_code / total_of_calls) * 100, 2)
+  print(f"{percentage} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
+
+
+if __name__ == "__main__":
+  task3()
