@@ -19,3 +19,7 @@ All telephone numbers are 10 or 11 numerical digits long. Each telephone number 
 * Mobile numbers have no parentheses, but have a space in the middle of the number to help readability. The mobile code of a mobile number is its first four digits and they always start with 7, 8 or 9. Example: "*9341*2 66159".
 
 * Telemarketers' numbers have no parentheses or space, but start with the code 140. Example: "*140*2316533".
+
+## Resources
+
+* [Big-O complexities](https://www.bigocheatsheet.com/)
